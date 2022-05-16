@@ -26,7 +26,7 @@ public class SuperAdapter extends RecyclerView.Adapter<ViewHolder> {
         Mountain mountain = mountains.get(position);
 
         holder.name.setText(mountain.name);
-        holder.height.setText(mountain.height);
+        holder.size.setText(String.valueOf(mountain.getSize()));
         holder.location.setText(mountain.location);
     }
 

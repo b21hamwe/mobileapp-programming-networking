@@ -17,12 +17,12 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity implements JsonTask.JsonTaskListener {
 
     private ArrayList<Mountain> mountainList;
-    RecyclerView recyclerView;
+    private RecyclerView recyclerView;
     private SuperAdapter adapter;
 
 
     private final String JSON_URL = "https://mobprog.webug.se/json-api?login=brom";
-    private final String JSON_FILE = "mountains.json";
+    private String TAG = "==>";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +33,9 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         mountainList = new ArrayList<Mountain>();
         recyclerView = findViewById(R.id. recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(adapter);
 
-        new JsonFile(this, this).execute(JSON_URL);
+        new JsonTask(this).execute(JSON_URL);
     }
 
     @Override
@@ -48,6 +49,6 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         adapter.notifyDataSetChanged();
 
         Log.d("MainActivity", json);
+        Log.d(TAG, json);
     }
-
 }

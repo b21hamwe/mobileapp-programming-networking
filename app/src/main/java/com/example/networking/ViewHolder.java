@@ -10,7 +10,7 @@ import java.text.BreakIterator;
 
 public class ViewHolder extends RecyclerView.ViewHolder {
 
-    public TextView height;
+    public TextView size;
     public TextView name;
     public TextView location;
 
@@ -19,6 +19,8 @@ public class ViewHolder extends RecyclerView.ViewHolder {
         super(itemView);
 
         name = itemView.findViewById(R.id.mountain_name);
-        
+        size = itemView.findViewById(R.id.height_name);
+        location = itemView.findViewById(R.id.location_name);
+
     }
 }

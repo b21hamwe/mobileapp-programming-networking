@@ -4,26 +4,41 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Mountain extends AppCompatActivity {
+public class Mountain {
 
     String name;
-    Integer height;
+    Integer size;
     String location;
 
+    public String getName() {
+        return name;
+    }
 
-    public Mountain(String Name, Integer Height,String Location){
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getSize() {
+        return size;
+    }
+
+    public void setSize(Integer size) {
+        this.size = size;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public Mountain(String Name, Integer Size, String Location){
         this.name = Name;
-        this.height = Height;
+        this.size = Size;
         this.location = Location;
     }
 
 
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mountain);
-
-
-    }
 }
