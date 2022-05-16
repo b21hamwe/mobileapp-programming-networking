@@ -12,7 +12,7 @@ public class ViewHolder extends RecyclerView.ViewHolder {
 
     public TextView height;
     public TextView name;
-    public TextView Location;
+    public TextView location;
 
 
     public ViewHolder(@NonNull View itemView) {
