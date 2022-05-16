@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -25,7 +26,10 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        adapter = new SuperAdapter();
+        mountainList = new ArrayList<Mountain>();
         recyclerView = findViewById(R.id. recyclerview);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         new JsonFile(this, this).execute(JSON_FILE);
     }
