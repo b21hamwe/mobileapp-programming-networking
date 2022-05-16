@@ -23,8 +23,13 @@ public class SuperAdapter extends RecyclerView.Adapter<ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        Mountain mountain = mountains.get(position);
 
+        holder.name.setText(mountain.name);
+        holder.height.setText(mountain.height);
+        holder.location.setText(mountain.location);
     }
+
 
     public int getItemCount(){
       return mountains.size();
