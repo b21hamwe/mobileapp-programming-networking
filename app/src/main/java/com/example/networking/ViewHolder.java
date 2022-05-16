@@ -6,11 +6,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.text.BreakIterator;
+
 public class ViewHolder extends RecyclerView.ViewHolder {
 
-    private TextView height;
-    private TextView name;
-    private TextView Location;
+    public TextView height;
+    public TextView name;
+    public TextView Location;
 
 
     public ViewHolder(@NonNull View itemView) {
