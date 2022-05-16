@@ -8,11 +8,13 @@ public class Mountain extends AppCompatActivity {
 
     String name;
     Integer height;
+    String location;
 
 
-    public Mountain(String Name, Integer Height){
+    public Mountain(String Name, Integer Height,String Location){
         this.name = Name;
         this.height = Height;
+        this.location = Location;
     }
 
 
