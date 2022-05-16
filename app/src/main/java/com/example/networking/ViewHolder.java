@@ -19,5 +19,6 @@ public class ViewHolder extends RecyclerView.ViewHolder {
         super(itemView);
 
         name = itemView.findViewById(R.id.mountain_name);
+        
     }
 }
