@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
 
         List<Mountain> listOfMountains = gson.fromJson(json,type);
         adapter.setMountains(listOfMountains);
-
+        adapter.notifyDataSetChanged();
 
         Log.d("MainActivity", json);
     }
