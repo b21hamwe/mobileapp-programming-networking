@@ -1,24 +1,30 @@
 package com.example.networking;
 
+import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class SuperAdapter {
+public class SuperAdapter extends RecyclerView.Adapter<ViewHolder> {
 
     private List<Mountain> mountains = new ArrayList();
+    @NonNull
+    @Override
 
-    public MountainViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType){
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType){
+
+        return new ViewHolder((LayoutInflater.from(parent.getContext()).inflate(R.layout.item_holder, parent, false)));
 
     };
 
-    public void onBindViewHolder(@NonNull MountainViewHolder holder, int position){
+    @Override
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-    };
-
+    }
 
     public int getItemCount(){
       return mountains.size();
